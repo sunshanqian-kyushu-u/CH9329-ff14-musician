@@ -1,4 +1,7 @@
 {
-    "name":"twinklestar",
-    "content":"115566504433221055443320554433201155665044332210"
+    "title":"twinklestar",
+    "bpm":120,
+    "meter":"555555755555575555557555555755555575555557",
+    "tone":"aagghhgffddssaggffddsggffddsaagghhgffddssa",
+    "tie":"000000000000000000000000000000000000000000"
 }
