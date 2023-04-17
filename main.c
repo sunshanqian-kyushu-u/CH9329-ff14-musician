@@ -303,7 +303,7 @@ int send_cmd(int driver_fd, char tone){
  * @param - ms_meter	: time
  * @return 				: delay us
  */
-unsigned int cal_delay_us(int ms_bpm, char *ms_meter){
+unsigned int cal_delay_us(double ms_bpm, char *ms_meter){
 	switch (*ms_meter)
 	{
 		case '1':
@@ -363,7 +363,7 @@ int main(int argc, char *argv[])
 	char *ms_meter;
 	char *ms_tone;
 	char *ms_tie;
-	int ms_bpm;
+	double ms_bpm;
 	int ms_meter_length;
 	int ms_tone_length;
 	int ms_tie_length;
@@ -432,7 +432,7 @@ int main(int argc, char *argv[])
 		return -1;
 	}
 
-	ms_bpm = cJSON_GetObjectItem(cjson,BPM)->valueint;
+	ms_bpm = cJSON_GetObjectItem(cjson,BPM)->valuedouble;
 	if(ms_bpm <= 0){
 		printf("[Error] ms_bpm data wrong!\r\n");
 		return -1;
